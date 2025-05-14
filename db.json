@@ -1,0 +1,35 @@
+{
+  "persons": [
+    {
+      "id": 1,
+      "nombre": "Carlos Pérez",
+      "profesion": "Doctor",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": true,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Ana Gómez",
+      "profesion": "Ingeniera",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": false,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Juan Martínez",
+      "profesion": "Profesor",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": true,
+        "11:00-12:00": false
+      }
+    }
+  ]
+}
+
