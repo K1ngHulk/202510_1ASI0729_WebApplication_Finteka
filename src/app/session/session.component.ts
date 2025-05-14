@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { SessionService, Person } from './session.service';
+import { HttpClient } from '@angular/common/http';
+
+interface Disponibilidad {
+  [hora: string]: boolean;
+}
+
+interface Persona {
+  id: number;
+  nombre: string;
+  profesion: string;
+  disponibilidad: Disponibilidad;
+}
 
 @Component({
   selector: 'app-session',
@@ -7,54 +18,29 @@ import { SessionService, Person } from './session.service';
   styleUrls: ['./session.component.css']
 })
 export class SessionComponent implements OnInit {
+  personas: Persona[] = [];
+  apiUrl = 'http://localhost:3000/persons';
 
-  persons: Person[] = [];
-  loading: boolean = false;
-  errorMessage: string = '';
-
-  constructor(private sessionService: SessionService) { }
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.loadPersons();
+    this.obtenerPersonas();
   }
 
-  loadPersons(): void {
-    this.loading = true;
-    this.sessionService.getPersons().subscribe({
-      next: (data) => {
-        this.persons = data;
-        this.loading = false;
-      },
-      error: (error) => {
-        this.errorMessage = 'Error cargando personas.';
-        this.loading = false;
-        console.error(error);
-      }
+  obtenerPersonas(): void {
+    this.http.get<Persona[]>(this.apiUrl).subscribe(data => {
+      this.personas = data;
     });
   }
 
-  toggleDisponibilidad(person: Person, timeSlot: string): void {
-    const currentState = person.disponibilidad[timeSlot];
-    // Toggle the current availability value
-    person.disponibilidad[timeSlot] = !currentState;
+  toggleDisponibilidad(persona: Persona, hora: string): void {
+    persona.disponibilidad[hora] = !persona.disponibilidad[hora];
 
-    // Call patch to update disponibilidad in backend
-    this.sessionService.updateDisponibilidad(person.id, person.disponibilidad).subscribe({
-      next: (updatedPerson) => {
-        // Optionally update local data with returned response
-        person.disponibilidad = updatedPerson.disponibilidad;
-      },
-      error: (error) => {
-        // revert the change on error
-        person.disponibilidad[timeSlot] = currentState;
-        alert('Error actualizando disponibilidad. Intente de nuevo.');
-        console.error(error);
-      }
-    });
+    this.http.put(`${this.apiUrl}/${persona.id}`, persona).subscribe();
   }
 
-  getTimeSlots(person: Person): string[] {
-    return Object.keys(person.disponibilidad);
+  // Método para obtener las horas de disponibilidad
+  getHoras(disponibilidad: Disponibilidad): string[] {
+    return Object.keys(disponibilidad);
   }
-
 }
