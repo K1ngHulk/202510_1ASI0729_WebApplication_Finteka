@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-login',
@@ -25,5 +26,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor() {}
+  username = '';
+  password = '';
+
+  constructor(private userService: UserService) {}
+
+  login() {
+    this.userService.login(this.username, this.password);
+  }
 }

@@ -1,0 +1,15 @@
+<div *ngIf="user">
+    <h2>Profile</h2>
+    <form (ngSubmit)="saveChanges()">
+        <label for="username">Username:</label>
+        <input id="username" [(ngModel)]="user.username" name="username" required />
+        <br />
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="user.email" name="email" required />
+        <br />
+        <label for="password">Password:</label>
+        <input id="password" type="password" [(ngModel)]="user.password" name="password" required />
+        <br />
+        <button type="submit">Save Changes</button>
+    </form>
+</div>

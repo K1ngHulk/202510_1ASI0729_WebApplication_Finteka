@@ -16,13 +16,13 @@
 
       <form>
         <mat-form-field appearance="outline" class="full-width">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="Value" type="email">
+          <mat-label for="username">Username</mat-label>
+          <input matInput placeholder="Ej.Alex" id="username" [(ngModel)]="username" name="username" required >
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
-          <mat-label>Password</mat-label>
-          <input matInput placeholder="Value" type="password">
+          <mat-label for="password">Password</mat-label>
+          <input matInput placeholder="" id="password" type="password" [(ngModel)]="password" name="password" required />
         </mat-form-field>
 
         <button mat-raised-button color="primary" class="login-btn full-width">Log In</button>
