@@ -1,0 +1,24 @@
+<div style="text-align: center; margin-bottom: 20px;">
+  <button class="btn-back">Volver al menú</button>
+</div>
+
+<div *ngFor="let person of persons" class="person-card">
+  <div class="person-header">
+    <h3>{{ person.nombre }} - <span class="profession">{{ person.profesion }}</span></h3>
+  </div>
+  <ul class="availability-list">
+    <li *ngFor="let time of objectKeys(person.disponibilidad)" class="availability-item">
+      <label class="availability-label">
+        <input
+          type="checkbox"
+          [checked]="person.disponibilidad[time]"
+          disabled>
+        <span class="availability-text">
+          <i [class]="person.disponibilidad[time] ? 'fas fa-check-circle available' : 'fas fa-times-circle not-available'"></i>
+          {{ time }}: {{ person.disponibilidad[time] ? 'Disponible' : 'No disponible' }}
+        </span>
+      </label>
+      <button class="btn-back reserve-btn">Reservar</button>
+    </li>
+  </ul>
+</div>
