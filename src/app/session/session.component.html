@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Gestor de Disponibilidad</h1>
+
+  <div *ngIf="loading" class="loading">Cargando personas...</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <div *ngIf="!loading && persons.length === 0">No hay personas disponibles.</div>
+
+  <div *ngFor="let person of persons" class="person-card">
+    <h2>{{ person.nombre }}</h2>
+    <p><strong>Profesión:</strong> {{ person.profesion }}</p>
+
+    <table>
+      <thead>
+        <tr><th>Horario</th><th>Disponible</th></tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let time of getTimeSlots(person)">
+          <td>{{ time }}</td>
+          <td>
+            <label class="switch">
+              <input type="checkbox" [checked]="person.disponibilidad[time]"
+                     (change)="toggleDisponibilidad(person, time)" />
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
