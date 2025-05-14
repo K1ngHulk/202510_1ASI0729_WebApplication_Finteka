@@ -1,0 +1,7 @@
+/* Ensure the toolbar stays at the top */
+
+
+/* Add padding to the content to prevent overlap with the toolbar */
+.content {
+    margin-top: 64px; /* Adjust this value based on the height of your toolbar */
+}

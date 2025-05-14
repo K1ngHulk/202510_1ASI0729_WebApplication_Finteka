@@ -1,0 +1,130 @@
+{
+  "users": [
+    {
+      "id": "e0b0",
+      "username": "75443755",
+      "email": "mathiasjaviermurillo@gmail.com",
+      "password": "sdsdasd"
+    },
+    {
+      "id": "ff27",
+      "username": "Mathias",
+      "email": "hola@gmail.com",
+      "password": "bdsvyuawsv"
+    },
+    {
+      "id": "5094",
+      "username": "asassa",
+      "email": "assa",
+      "password": "asasa"
+    },
+    {
+      "id": "18c9",
+      "username": "sdasdas",
+      "email": "sddsdsaas",
+      "password": "asdasdasdas"
+    }
+  ],
+  "profesionals": [
+    {
+      "id": 1,
+      "nombre": "Carlos Pérez",
+      "profesion": "Doctor",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": true,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Ana Gómez",
+      "profesion": "Ingeniera",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": false,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Juan Martínez",
+      "profesion": "Profesor",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": true,
+        "11:00-12:00": false
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Lucía Fernández",
+      "profesion": "Psicóloga",
+      "disponibilidad": {
+        "09:00-10:00": false,
+        "10:00-11:00": true,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Miguel Torres",
+      "profesion": "Abogado",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": false,
+        "11:00-12:00": false
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Paula Ramírez",
+      "profesion": "Diseñadora",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": true,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Diego Castro",
+      "profesion": "Arquitecto",
+      "disponibilidad": {
+        "09:00-10:00": false,
+        "10:00-11:00": true,
+        "11:00-12:00": false
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Valeria Soto",
+      "profesion": "Contadora",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": false,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Andrés Núñez",
+      "profesion": "Dentista",
+      "disponibilidad": {
+        "09:00-10:00": false,
+        "10:00-11:00": false,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 10,
+      "nombre": "Camila Herrera",
+      "profesion": "Enfermera",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": true,
+        "11:00-12:00": false
+      }
+    }
+  ]
+}
