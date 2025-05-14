@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "e0b0",
+      "username": "75443755",
+      "email": "mathiasjaviermurillo@gmail.com",
+      "password": "sdsdasd"
+    },
+    {
+      "id": "ff27",
+      "username": "Mathias",
+      "email": "hola@gmail.com",
+      "password": "bdsvyuawsv"
+    },
+    {
+      "id": "5094",
+      "username": "asassa",
+      "email": "assa",
+      "password": "asasa"
+    },
+    {
+      "id": "18c9",
+      "username": "sdasdas",
+      "email": "sddsdsaas",
+      "password": "asdasdasdas"
+    }
+  ]
+}
