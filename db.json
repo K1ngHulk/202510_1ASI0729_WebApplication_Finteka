@@ -29,7 +29,76 @@
         "10:00-11:00": true,
         "11:00-12:00": false
       }
+    },
+    {
+      "id": 4,
+      "nombre": "Lucía Fernández",
+      "profesion": "Psicóloga",
+      "disponibilidad": {
+        "09:00-10:00": false,
+        "10:00-11:00": true,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Miguel Torres",
+      "profesion": "Abogado",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": false,
+        "11:00-12:00": false
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Paula Ramírez",
+      "profesion": "Diseñadora",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": true,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Diego Castro",
+      "profesion": "Arquitecto",
+      "disponibilidad": {
+        "09:00-10:00": false,
+        "10:00-11:00": true,
+        "11:00-12:00": false
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Valeria Soto",
+      "profesion": "Contadora",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": false,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 9,
+      "nombre": "Andrés Núñez",
+      "profesion": "Dentista",
+      "disponibilidad": {
+        "09:00-10:00": false,
+        "10:00-11:00": false,
+        "11:00-12:00": true
+      }
+    },
+    {
+      "id": 10,
+      "nombre": "Camila Herrera",
+      "profesion": "Enfermera",
+      "disponibilidad": {
+        "09:00-10:00": true,
+        "10:00-11:00": true,
+        "11:00-12:00": false
+      }
     }
   ]
 }
-
