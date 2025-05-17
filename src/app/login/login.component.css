@@ -1,0 +1,210 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #004d61;
+  color: white;
+  height: 60px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00b8d4;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a.active {
+  font-weight: bold;
+}
+
+.menu .register-btn {
+  background-color: #00b8d4;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.company-name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.company-name span {
+  color: #00b8d4;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.login-btn {
+  background-color: #00b8d4;
+  color: white;
+  margin-top: 10px;
+  height: 45px;
+  font-size: 16px;
+}
+
+.links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  color: #00b8d4;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  background-color: #004d61;
+  color: white;
+  padding: 20px;
+  justify-content: space-around;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-login {
+  display: inline-block;
+  background-color: #00b8d4;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer-register {
+  display: inline-block;
+  background-color: white;
+  color: #00b8d4;
+  border: 1px solid #00b8d4;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu a, .menu .register-btn {
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .content {
+    padding: 20px 10px;
+    align-items: flex-start;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    padding: 20px;
+  }
+
+  .company-name {
+    font-size: 22px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .footer-section {
+    align-items: center;
+  }
+
+  .footer-login,
+  .footer-register {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .company-name {
+    font-size: 20px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .links a {
+    font-size: 12px;
+  }
+}

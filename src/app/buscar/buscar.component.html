@@ -1,0 +1,25 @@
+<div class="buscar-container">
+    <input [(ngModel)]="nombre" type="text" placeholder="Ingresa nombre del profesional" />
+    <button (click)="buscarProfesionalesPorNombre(nombre)">Buscar por nombre</button>
+</div>
+
+<div class="filtros">
+    <label>
+        <input type="checkbox" [(ngModel)]="filtros.experiencia" />
+        Mostrar años de experiencia
+    </label>
+    <label>
+        <input type="checkbox" [(ngModel)]="filtros.horas" />
+        Mostrar horas trabajadas
+    </label>
+</div>
+
+<div *ngIf="mensaje" style="text-align:center; color:#e74c3c; font-weight:bold;">{{ mensaje }}</div>
+
+<div *ngFor="let persona of profesionals" class="profesional-card">
+    <p><strong>Nombre:</strong> {{ persona.nombre }}</p>
+    <p><strong>Profesión:</strong> {{ persona.profesion }}</p>
+
+    <p *ngIf="filtros.experiencia"><strong>Experiencia:</strong> {{ persona.experiencia }} años</p>
+    <p *ngIf="filtros.horas"><strong>Horas trabajadas:</strong> {{ persona.horas }}</p>
+</div>

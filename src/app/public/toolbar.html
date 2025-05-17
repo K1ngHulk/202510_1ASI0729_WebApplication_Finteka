@@ -1,0 +1,18 @@
+<div class="header" *ngIf="isLoggedIn; else guestHeader">
+    <div class="logo">FinTeka</div>
+    <div class="menu">
+        <a (click)="navigateTo('/search')">Search</a>
+        <a (click)="navigateTo('/profile')">Profiles</a>
+        <a (click)="navigateTo('/session')">Sessions</a>
+    </div>
+</div>
+
+<ng-template #guestHeader>
+    <div class="header">
+        <div class="logo">FinTeka</div>
+        <div class="menu">
+            <a class="active" routerLink="/login">Log In</a>
+            <a class="register-btn" routerLink="/register">Register Now</a>
+        </div>
+    </div>
+</ng-template>

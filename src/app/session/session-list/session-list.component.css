@@ -1,0 +1,196 @@
+.person-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.person-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.person-header {
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.person-header h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.profession {
+  color: #007bff;
+  font-style: italic;
+}
+
+.availability-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.availability-item {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.availability-label {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.availability-text {
+  margin-left: 8px;
+}
+
+.availability-text i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.fas.fa-check-circle.available {
+  color: #28a745;
+}
+
+.fas.fa-times-circle.not-available {
+  color: #dc3545;
+}
+
+.btn-back {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+  width: 200px;
+}
+
+.btn-back:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4);
+}
+
+.btn-back:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: scale(1);
+  box-shadow: none;
+}
+
+.reserve-btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reserve-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .menu a,
+  .menu .register-btn {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .menu a,
+  .menu .register-btn {
+    font-size: 15px;
+    padding: 8px 0;
+  }
+}
+
+
+@media (max-width: 210px) {
+  .person-card {
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .person-header h3 {
+    font-size: 14px;
+  }
+
+  .profession {
+    font-size: 12px;
+  }
+
+  .availability-label {
+    font-size: 13px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .availability-text {
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  .availability-text i {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  .btn-back {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .reserve-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+    margin-left: 0;
+    margin-top: 6px;
+  }
+}

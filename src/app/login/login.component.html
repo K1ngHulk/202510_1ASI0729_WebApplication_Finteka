@@ -1,0 +1,43 @@
+<div class="page-container">
+  <div class="content">
+    <div class="form-container">
+      <div class="company-name">FinTeka</div>
+
+      <form (ngSubmit)="login()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label for="username">Username</mat-label>
+          <input matInput placeholder="Ej.Alex" id="username" [(ngModel)]="username" name="username" required >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label for="password">Password</mat-label>
+          <input matInput placeholder="" id="password" type="password" [(ngModel)]="password" name="password" required />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="login-btn full-width" type="submit">Log In</button>
+
+        <div class="links">
+          <a href="#">Forgot password?</a>
+          <a routerLink="/register">Don't have an account yet? Register now</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-section">
+      <a href="#" class="footer-login">Log In</a>
+      <a routerLink="/register" class="footer-register">Register Now</a>
+    </div>
+    <div class="footer-section">
+      <div class="footer-title">Contact Us</div>
+      <div>Phone: +01 999 999 999</div>
+      <div>Email: servicioalclientefinteka.com</div>
+    </div>
+    <div class="footer-section">
+      <div class="footer-title">Legal</div>
+      <div>Terms & Conditions</div>
+      <div>Privacy Policy</div>
+    </div>
+  </div>
+</div>
